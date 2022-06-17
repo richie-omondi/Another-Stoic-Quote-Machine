@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Stoic Quote Machine</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <script>
+        function play(str) {
+            
+            if (str === "q" || str === "Q") {
+                document.getElementById('display').innerText = "On the shortness of life";
+            } else if (str === "w" || str === "W") {
+                document.getElementById('display').innerText = "On following nature";
+            } else if (str === "e" || str === "E") {
+                document.getElementById('display').innerText = "On wishes";
+            } else if (str === "a" || str === "A") {
+                document.getElementById('display').innerText = "On bearing life's challenges";
+            } else if (str === "s" || str === "S") {
+                document.getElementById('display').innerText = "Epictetus from Enchiridion";
+            } else if (str === "d" || str === "D") {
+                document.getElementById('display').innerText ="On desires";
+            } else if (str === "z" || str === "Z") {
+                document.getElementById('display').innerText = "Epictetus from The Discourses";
+            } else if (str === "x" || str ==="X") {
+                document.getElementById('display').innerText = "On bravery";
+            } else if (str === "c" || str === "C") {
+                document.getElementById('display').innerText = "Each day a new day";
+            }
+
+            var audio = document.getElementById(str);
+            audio.play();
+        }
+
+        window.document.onkeyup = function(event) {
+            let keystroke = event.key
+            if (keystroke === "q" || keystroke === "Q") {
+                play("Q");
+            } else if (keystroke === "w" || keystroke === "W") {
+                play("W");
+            } else if (keystroke === "e" || keystroke === "E") {
+                play("E");
+            } else if (keystroke === "a" || keystroke === "A") {
+                play("A");
+            } else if (keystroke === "s" || keystroke === "S") {
+                play("S");
+            } else if (keystroke === "d" || keystroke === "D") {
+                play('D');
+            } else if (keystroke === "z" || keystroke === "Z") {
+                play('Z');
+            } else if (keystroke === "x" || keystroke ==="X") {
+                play('X');
+            } else if (keystroke === "c" || keystroke === "C") {
+                play('C');
+            }
+        }
+    </script>
+  </head>
+  <body>
+    <div class="container" id="drum-machine">
+        <h1 class="text-center">Stoic Quote Machine</h1>
+        <div class="card my-3">
+            <div class="card-body">
+                <div id="display" class="text-center">Nothing yet to display</div>
+            </div>
+        </div>
+        <div class="d-grip gap-2 col-5 mx-auto">
+        <button class="drum-pad btn btn-block btn-primary" id="drum-0" onclick="play('Q')">Q
+            <audio src="./clip/Q.m4a"class="clip" id="Q">
+        </button>
+        <button class="drum-pad btn btn-block btn-primary" id="drum-1" onclick="play('W')">W
+            <audio src="./clip/W.m4a" class="clip" id="W">
+        </button>
+        <button class="drum-pad btn btn-block btn-primary" id="drum-2" onclick="play('E')">E
+            <audio src="./clip/E.m4a" class="clip" id="E">
+        </button>
+        <button class="drum-pad btn btn-block btn-primary" id="drum-3" onclick="play('A')">A
+            <audio src="./clip/A.m4a" class="clip" id="A">
+        </button>
+        <button class="drum-pad btn btn-block btn-primary" id="drum-4" onclick="play('S')">S
+            <audio src="./clip/S.m4a" class="clip" id="S">
+        </button>
+        <button class="drum-pad btn btn-block btn-primary" id="drum-5" onclick="play('D')">D
+            <audio src="./clip/D.m4a" class="clip" id="D">
+        </button>
+        <button class="drum-pad btn btn-block btn-primary" id="drum-6" onclick="play('Z')">Z
+            <audio src="./clip/Z.m4a" class="clip" id="Z">
+        </button>
+        <button class="drum-pad btn btn-block btn-primary" id="drum-7" onclick="play('X')">X
+            <audio src="./clip/X.m4a" class="clip" id="X">
+        </button>
+        <button class="drum-pad btn btn-block btn-primary" id="drum-8" onclick="play('C')">C
+            <audio src="./clip/C.m4a" class="clip" id="C">
+        </button>
+        </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+  </body>
+</html>
